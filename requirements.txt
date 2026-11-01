@@ -1,0 +1,10 @@
+# Tested target: Python 3.10 or 3.11 (cassandra-driver is not reliable on 3.12+ yet)
+pyspark==3.5.1
+cassandra-driver==3.29.1
+pandas>=2.0,<2.3
+numpy>=1.24,<2.0
+streamlit>=1.36,<2.0
+pyarrow>=10,<18
+plotly>=5.24,<6.0
+python-dotenv>=1.0
+pytest>=7.4

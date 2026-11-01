@@ -1,0 +1,16 @@
+# Single-node Cassandra for local development (Docker Desktop on Windows).
+# A single node gives NO fault tolerance - see README "Limitations".
+services:
+  cassandra:
+    image: cassandra:4.1
+    container_name: smartcity-cassandra
+    ports:
+      - "9042:9042"
+    environment:
+      - CASSANDRA_CLUSTER_NAME=SmartCityDev
+      - MAX_HEAP_SIZE=1G
+      - HEAP_NEWSIZE=256M
+    volumes:
+      - cassandra_data:/var/lib/cassandra
+volumes:
+  cassandra_data:
